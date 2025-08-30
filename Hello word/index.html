@@ -1,11 +1,36 @@
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-    <title aria-setsize="10">Hello World</title>  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar sesión</title>
 </head>
 <body>
-    <h1 aria-level="1">Hello World</h1>
-    <button aria-pressed="false">Click Me</button>
-    <h2> Mis cursos favoritos son Desarrollo web y Roboticaj</h2>
-    <h3> Mis libros favortios son aburridos </h3>
+  <main>
+    <h1>Iniciar sesión</h1>
+
+    <!-- Formulario de login "solo HTML" (sin CSS ni JS) -->
+    <form action="/login" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Acceso</legend>
+
+        <label for="user">Usuario o correo</label>
+        <input id="user" name="username" type="text" required minlength="3" maxlength="64" autofocus />
+
+        <label for="pass">Contraseña</label>
+        <input id="pass" name="password" type="password" required minlength="6" maxlength="128" />
+
+        <label>
+          <input type="checkbox" name="remember" />
+          Recuérdame
+        </label>
+
+        <button type="submit">Ingresar</button>
+      </fieldset>
+
+      <p><a href="/forgot">¿Olvidaste tu contraseña?</a></p>
+      <p>¿No tienes cuenta? <a href="/registro">Crea una</a></p>
+    </form>
+  </main>
 </body>
 </html>
